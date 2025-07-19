@@ -1,3 +1,4 @@
 .DS_Store
-*/*/.env
 config/litellm/litellm_config.yaml
+config/.env
+config/mcpo/mcpo_config.yaml
