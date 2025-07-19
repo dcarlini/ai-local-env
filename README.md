@@ -20,9 +20,10 @@ The project is structured into the following main components:
 -   **Shared Services Docker Compose**: A `docker-compose-shared.yaml` file for defining services that are common across multiple stacks. Currently it defines a docker bridge network which all services run in
 
 -   **Stacks**: Pre-configured Docker Compose stacks for different services.
-    -   `ai-localllm`: includes Ollama.  This is it's own stack as some users may want use external LLMs exclusively or outside of docker on a more powerful machine.
-    -   `ai-webui`: includes Open Web UI and Lite LLM 
-   
+    -   `localllm`: includes Ollama.  This is it's own stack as some users may want use external LLMs exclusively or outside of docker on a more powerful machine.
+    -   `mcpo`: includes MCPO 
+    -   `webui`: includes Open Web UI and Lite LLM 
+
 -   **Configuration**: Centralized configuration management.
     -   `config/sample.env`: A sample environment file to customize your setup.
     -   `config/litellm/sample-litellm_config.yaml`: LiteLLM config file. Sample includes OpenAI models such as GPT 4.O but can be configued to add many others such as Gemini, Antrophic, Hugging Face Models  More information of support providers & models can be found on the [LiteLLM documentation](https://docs.litellm.ai/docs/) is vast 
@@ -89,7 +90,7 @@ You can run it all or piecemeal. The shared docker compose is required to be run
 ### Run it all
 
 ```bash
-docker-compose -f docker-compose.yml -f stacks/ai-localllm/docker-compose.yml -f stacks/ai-mcpo/docker_compose.yml -f stacks/ai-webui/docker_compose.yml up -d
+docker-compose -f docker-compose.yml -f stacks/localllm/docker-compose.yml -f stacks/mcpo/docker_compose.yml -f stacks/webui/docker_compose.yml up -d
 ```
 
 ### Run the shared components
@@ -104,19 +105,19 @@ To run a specific stack, use the `docker-compose` command with the appropriate c
 #### Run the Local LLM Stack
 
 ```bash
-docker-compose -f stacks/ai-localllm/docker-compose.yml up -d
+docker-compose -f stacks/localllm/docker-compose.yml up -d
 ```
 
 #### Run the MCP Stack
 
 ```bash
-docker-compose -f stacks/ai-mcpo/docker-compose.yml up -d
+docker-compose -f stacks/mcpo/docker-compose.yml up -d
 ```
 
 #### Run the Web UI Stack
 
 ```bash
-docker-compose -f stacks/ai-webui/docker-compose.yml up -d
+docker-compose -f stacks/webui/docker-compose.yml up -d
 ```
 
 ## Access URLs
