@@ -84,7 +84,7 @@ Exact configuration is outside the scope of this document but is documented at
 
 The docker compose files are split into stacks. This allows you to pick and choose which services to run.   
 
-You can run it all or piecemeal. The shared docker compose is required sets up a shared network so that the services can interact.
+You can run it all or piecemeal. The shared docker compose is required to be run first and sets up a shared network so that the services can interact.
 
 ### Run it all
 
@@ -113,3 +113,18 @@ docker-compose -f stacks/ai-localllm/compose.yaml up -d
 docker-compose -f stacks/ai-webui/compose.yaml up -d
 ```
 
+## Access URLs
+
+Once the services are running, you can access them at the following URLs:
+
+-   **Open WebUI**: [http://localhost:3000](http://localhost:3000)
+-   **LiteLLM API**: [http://localhost:4000](http://localhost:4000)
+-   **Ollama API**: [http://localhost:11434](http://localhost:11434)
+
+Replace localhost with the server IP if running on a different machine 
+
+## Related Links
+- [Open WebUI Documentation](https://docs.openwebui.com/)
+- [LiteLLM documentation](https://docs.litellm.ai/docs/)
+- [Ollama Models](https://ollama.com/search)
+- [MCP Servers GitHub](https://github.com/modelcontextprotocol/servers) 
