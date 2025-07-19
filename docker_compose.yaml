@@ -1,0 +1,6 @@
+include:
+  # includes ollama
+  - ./stacks/ai-localllm/compose.yaml
+  # includes open-webui and litellm
+  - ./stacks/ai-webui/compose.yaml
+
