@@ -1,0 +1,16 @@
+services:
+  mcpo:
+    build: .
+    container_name: mcpo
+    image: ghcr.io/alephpiece/mcpo
+    ports:
+      - 8000:8000
+    volumes:
+      - ../../config/mcpo/mcpo-config.json:/app/config.json
+    networks:
+      - local_ai_network
+
+networks:
+  local_ai_network:
+    external: true
+    name: local_ai_network

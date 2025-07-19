@@ -123,6 +123,8 @@ Once the services are running, you can access them at the following URLs:
 
 Replace localhost with the server IP if running on a different machine 
 
+On your first login to Open WebUI you will need to setup a admin user. Simily fill out the form providing a name, email and password. 
+
 ## Related Links
 - [Open WebUI Documentation](https://docs.openwebui.com/)
 - [LiteLLM documentation](https://docs.litellm.ai/docs/)

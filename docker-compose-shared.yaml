@@ -1,5 +1,5 @@
 # Creates the shared network used by all the services
-# Dummy service need to other network is ignore
+# Dummy service need otherwise network is ignore
 # this is equivalent to creating the network on the command line
 # docker network create --driver bridge local_ai_network
 
