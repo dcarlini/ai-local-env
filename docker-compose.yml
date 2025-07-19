@@ -2,7 +2,7 @@
 # Dummy service need otherwise network is ignore
 # this is equivalent to creating the network on the command line
 # docker network create --driver bridge local_ai_network
-
+# docker compose file in each of the stacks must be run separately
 services:
   dummy:
     image: busybox

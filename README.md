@@ -89,13 +89,13 @@ You can run it all or piecemeal. The shared docker compose is required to be run
 ### Run it all
 
 ```bash
-docker-compose -f docker-compose-shared.yaml -f stacks/ai-localllm/compose.yaml -f stacks/ai-webui/compose.yaml up -d
+docker-compose -f docker-compose.yml -f stacks/ai-localllm/docker-compose.yml -f stacks/ai-mcpo/docker_compose.yml -f stacks/ai-webui/docker_compose.yml up -d
 ```
 
 ### Run the shared components
 
 ```bash
-docker-compose -f docker-compose-shared.yaml
+docker-compose up -d
 ```
 
 ### Run stacks
@@ -104,13 +104,19 @@ To run a specific stack, use the `docker-compose` command with the appropriate c
 #### Run the Local LLM Stack
 
 ```bash
-docker-compose -f stacks/ai-localllm/compose.yaml up -d
+docker-compose -f stacks/ai-localllm/docker-compose.yml up -d
+```
+
+#### Run the MCP Stack
+
+```bash
+docker-compose -f stacks/ai-mcpo/docker-compose.yml up -d
 ```
 
 #### Run the Web UI Stack
 
 ```bash
-docker-compose -f stacks/ai-webui/compose.yaml up -d
+docker-compose -f stacks/ai-webui/docker-compose.yml up -d
 ```
 
 ## Access URLs
