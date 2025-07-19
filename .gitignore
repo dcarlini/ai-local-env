@@ -1,4 +1,4 @@
 .DS_Store
 config/litellm/litellm_config.yaml
 config/.env
-config/mcpo/mcpo_config.yaml
+config/mcpo/mcpo_config.json
