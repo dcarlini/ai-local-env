@@ -11,19 +11,13 @@ services:
       sh -c "
       ollama serve &
       sleep 3 &&
-      ollama pull qwen2.5:7b-instruct-q4_K_M &&
+      ollama pull qwen2.5:1.5b &&
       wait
       "
     networks:
       - local_ai_network
-#  mcpo:
-#    build: .
-#    container_name: mcpo
-#    image: ghcr.io/alephpiece/mcpo
-#    ports:
-#      - 8000:8000
-#    volumes:
-#      - /config/mcpo-config/config.json:/app/config.json
+    restart: unless-stopped
+
 volumes:
   ollama: {}
 
