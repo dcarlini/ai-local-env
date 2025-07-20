@@ -138,6 +138,8 @@ Once the services are running, you can access them at the following URLs:
 -   **Open WebUI**: [http://localhost:3000](http://localhost:3000)
 -   **LiteLLM API**: [http://localhost:4000](http://localhost:4000)
 -   **Ollama API**: [http://localhost:11434](http://localhost:11434)
+-   **MCPO API**: [http://localhost:8000/docs](http://localhost:8000/docs)
+
 
 Replace localhost with the server IP if running on a different machine 
 
