@@ -42,19 +42,19 @@ The project is structured into the following main components:
 
 #### 1.  **Clone the repository:**
 
-    ```bash
-    git clone https://github.com/dcarlini/ai-local-env
-    cd ai-local-env
-    ```
+```bash
+git clone https://github.com/dcarlini/ai-local-env
+cd ai-local-env
+```
 
 #### 2.  **Configure your environment:**
 
 ##### Copy the sample environment file and customize it to your needs:
 
-    ```bash
-    cd config
-    cp sample.env .env
-    ```
+```bash
+cd config
+cp sample.env .env
+```
 
 ##### Modify `.env` setting necessary environment variables 
     
@@ -70,10 +70,10 @@ If you prefer not to provide keys in a environment file set the variables on the
 
 ##### Copy the sample litellm config file and customize it to your needs:
 
-    ```bash
-    cd litellm
-    cp sample-litellm_config.yaml litellm_config.yaml
-    ```
+```bash
+cd litellm
+cp sample-litellm_config.yaml litellm_config.yaml
+```
 
 ##### Customize LiteLLM Config
 The sample works out of the box and gives you access to two GPT models assuming you have a working OpenAPI Developer Account.  
@@ -86,10 +86,10 @@ Exact configuration is outside the scope of this document but is documented at
 
 ##### Copy the sample mcpo config file and customize it to your needs:
 
-    ```bash
-    cd mcpo
-    cp sample-mcpo_config.yaml mcpo_config.yaml
-    ```
+```bash
+cd mcpo
+cp sample-mcpo_config.yaml mcpo_config.yaml
+```
 Follow the "Add MCP Servers / Tools" section for instructions to add each MCP server to Open Web UI and how to add new MCP Servers
 
 ## Usage
