@@ -19,7 +19,7 @@ This project provides a flexible and customizable local AI environment running i
 
 The project is structured into the following main components:
 
--   **Shared Services Docker Compose**: A `docker-compose-shared.yaml` file for defining services that are common across multiple stacks. Currently it defines a docker bridge network which all services run in
+-   **Base Docker Compose**: `docker-compose.yml` file for defining shared services only.  Currently it defines a docker bridge network which all services run in. 
 
 -   **Stacks**: Pre-configured Docker Compose stacks for different services.
     -   `localllm`: includes Ollama.  This is it's own stack as some users may want use external LLMs exclusively or outside of docker on a more powerful machine.
@@ -104,7 +104,7 @@ You can run it all or piecemeal. The shared docker compose is required to be run
 docker-compose -f docker-compose.yml -f stacks/localllm/docker-compose.yml -f stacks/mcpo/docker_compose.yml -f stacks/webui/docker_compose.yml up -d
 ```
 
-### Run the shared components
+### Run the common docker compose
 
 ```bash
 docker-compose up -d
